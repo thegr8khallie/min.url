@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.onboarding-body {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, red, blue);
+}
+
+.onboarding {
+  width: calc(100vw - 20px);
+  height: calc(100vh - 20px);
+  position: relative;
+  padding: 10px;
+  background-color: #f1fffa;
+}
+
+.doodle {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  padding-top: 5%;
+  background-color: #f1fffa;
+}
+
+@media screen and (min-width: 768px) {
+  .doodle {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.doodle[data-active] {
+  opacity: 1;
+}
+
+.doodle-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.doodle-svg {
+  height: 65%;
+}
+
+.doodle-text {
+  height: 35%;
+  position: relative;
+  padding: 10px;
+}
+
+@media screen and (max-height: 640px) {
+  .doodle-svg {
+    height: 60%;
+  }
+  .doodle-text {
+    height: 40%;
+  }
+}
+.doodle-text-head,
+.doodle-text-body,
+.onboard-btn {
+  text-align: center;
+}
+
+.doodle-text-head {
+  font-size: 30px;
+}
+
+.doodle-text-body {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.onboard-btn {
+  position: absolute;
+  bottom: 10px;
+  width: calc(80% - 20px);
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #3c91e6;
+  background-color: #3c91e6;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,6 @@
+//In this main stylesheet, all the other partials are imported.
+@use "./2-Base/base";
+@use "./3-Components/components";
+@use "./4-Layout/layout";
+@use "./5-Pages/pages";
+@use "./6-Themes/themes";

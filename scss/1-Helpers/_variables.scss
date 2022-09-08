@@ -3,8 +3,13 @@ $mintCream: #f1fffa;
 $black: #000000;
 $dimGray: #6e6862;
 $tuftsBlue: #3c91e6;
+$cyan: #00ffff;
 
 //Breakpoints
-$desktop: 1280px;
-$tablet: 768px;
-$mobile: 420px;
+$desktop: 128rem;
+$tablet: 76.8rem;
+$mobile: 42rem;
+
+//Font-family
+$poppinsMed: poppinsMedium, sans-serif;
+$poppinsBold: poppinsBold, sans-serif;

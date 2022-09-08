@@ -1,89 +1,22 @@
-html {
-  font-size: 0.625em;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-@font-face {
-  font-family: poppinsMedium;
-  src: url("../../assets/fonts/Poppins-Medium.ttf") format("truetype");
-}
-@font-face {
-  font-family: poppinsBold;
-  src: url("../../assets/fonts/Poppins-Bold.ttf") format("truetype");
-}
-body {
-  font-family: poppinsMedium, sans-serif;
-  font-size: 1.6rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: poppinsBold, sans-serif;
-}
-
-body {
-  padding: 0 6rem;
-  background-color: #f1fffa;
-}
-
-@media screen and (max-width: 76.8rem) {
-  body {
-    padding: 3rem 0;
-  }
-}
+@use "../1-Helpers/helpers" as *;
 .nav {
   position: fixed;
   top: 0;
   width: calc(100vw - 12rem);
   height: 5vh;
   padding: 1rem 0;
-  background-color: #f1fffa;
+  background-color: $mintCream;
 }
-
 .navi {
   display: flex;
   justify-content: flex-end;
   height: auto;
   position: relative;
 }
-
 .nav-logo {
   position: absolute;
   left: 0;
 }
-
 .navi-element {
   display: flex;
   justify-content: space-between;
@@ -91,10 +24,9 @@ body {
   width: 30%;
   overflow: hidden;
 }
-
 .nav-user-signup {
   padding: 0.3rem;
-  background-color: #00ffff;
+  background-color: $cyan;
   text-align: center;
   width: 10rem;
   border-radius: 5rem;
@@ -104,15 +36,14 @@ body {
   width: 3rem;
   overflow: hidden;
   display: none;
+  > .hamburger {
+    width: 1.5rem;
+    height: 0.8rem;
+    border: 0.25rem solid $black;
+    margin: 0.1rem 0;
+  }
 }
-.hamburger-wrapper > .hamburger {
-  width: 1.5rem;
-  height: 0.8rem;
-  border: 0.25rem solid #000000;
-  margin: 0.1rem 0;
-}
-
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: $tablet) {
   .nav {
     width: 100vw;
     padding: 2rem 0;
@@ -148,4 +79,4 @@ body {
 .ham-menu {
   animation: ham-menu 1s;
   animation-fill-mode: forwards;
-}/*# sourceMappingURL=styles.css.map */
+}

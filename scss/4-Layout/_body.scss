@@ -1,0 +1,11 @@
+@use "../1-Helpers/helpers" as *;
+
+body {
+  padding: 0 6rem;
+  background-color: $mintCream;
+}
+@media screen and (max-width: $tablet) {
+  body {
+    padding: 3rem 0;
+  }
+}

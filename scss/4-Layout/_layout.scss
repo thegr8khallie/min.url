@@ -1,1 +1,4 @@
 //For layouts like grids, tables, headers, navigation, footers etc
+@forward "./body";
+@forward "./nav";
+@forward "./hero";

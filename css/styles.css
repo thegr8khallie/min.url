@@ -34,6 +34,19 @@ img {
   object-position: center;
 }
 
+button,
+input[type=submit] {
+  background-color: #2acfcf;
+  border: 0.1rem solid #2acfcf;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover,
+input[type=submit]:hover {
+  background-color: #50dcdc;
+  border: 0.1rem solid #50dcdc;
+}
+
 @font-face {
   font-family: poppinsMedium;
   src: url("../../assets/fonts/Poppins-Medium.ttf") format("truetype");
@@ -42,7 +55,7 @@ img {
   font-family: poppinsBold;
   src: url("../../assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
-body {
+* {
   font-family: poppinsMedium, sans-serif;
   font-size: 1.6rem;
 }
@@ -53,6 +66,30 @@ h3 {
   font-family: poppinsBold, sans-serif;
 }
 
+h1.hero-text-header {
+  font-size: 9rem;
+  line-height: 9rem;
+}
+
+p.hero-text-body {
+  color: #6a6666;
+}
+
+button,
+input[type=submit] {
+  color: #f1fffa;
+}
+button:hover,
+input[type=submit]:hover {
+  color: #beffe8;
+}
+
+@media only screen and (max-width: 42rem) {
+  h1.hero-text-header {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
 body {
   padding: 0 6rem;
   background-color: #f1fffa;
@@ -94,7 +131,6 @@ body {
 
 .nav-user-signup {
   padding: 0.3rem;
-  background-color: #00ffff;
   text-align: center;
   width: 10rem;
   border-radius: 5rem;
@@ -112,7 +148,7 @@ body {
   margin: 0.1rem 0;
 }
 
-@media screen and (max-width: 76.8rem) {
+@media only screen and (max-width: 76.8rem) {
   .nav {
     width: 100vw;
     padding: 2rem 0;
@@ -129,6 +165,7 @@ body {
     transform: translate(-0.5rem, -20rem);
     gap: 0.5rem;
     padding: 1rem;
+    transition: 1s;
   }
   .hamburger-wrapper {
     display: block;
@@ -137,15 +174,165 @@ body {
     right: 0.2rem;
   }
 }
-@keyframes ham-menu {
-  from {
-    transform: translate(-0.5rem, -20rem);
+.whitespace-nav {
+  height: 6vh;
+}
+
+.hero {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 10rem;
+}
+
+.hero-svg {
+  flex-basis: 50%;
+}
+
+.hero-text {
+  display: grid;
+  justify-content: left;
+  align-content: center;
+}
+
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 1.5rem;
+}
+
+.hero-btn {
+  width: 12rem;
+  padding: 0.5rem;
+  border-radius: 9rem;
+}
+
+@media only screen and (max-width: 76.8rem) {
+  .hero {
+    flex-direction: column-reverse;
   }
-  to {
-    transform: translate(-0.5rem, 0.5rem);
+  .hero-text {
+    align-self: center;
+    place-items: center;
+  }
+  .hero-text-wrapper {
+    text-align: center;
+  }
+  .hero-btn {
+    align-self: center;
   }
 }
-.ham-menu {
-  animation: ham-menu 1s;
-  animation-fill-mode: forwards;
+.info-section {
+  background-color: #beffe8;
+  position: relative;
+}
+
+.form-container {
+  width: calc(90vw - 12rem);
+  height: 10rem;
+  background-color: rebeccapurple;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -5rem);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.whitespace-form {
+  height: 10rem;
+}
+
+.form-control {
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  display: flex;
+  gap: 1rem;
+}
+
+.form-control > input {
+  border-radius: 1rem;
+  padding: 0 1.5rem;
+}
+
+.form-control > input:not([type=submit]) {
+  border: 1px solid white;
+}
+.form-control > input:not([type=submit]):focus {
+  outline: 0;
+}
+
+.form-control > input[type=url] {
+  flex-basis: 55%;
+}
+
+.form-control > input[type=text] {
+  flex-basis: 30%;
+}
+
+.form-control > input[type=submit] {
+  flex-basis: 15%;
+}
+
+.info-section-intro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 40rem;
+  text-align: center;
+  background-color: maroon;
+}
+
+/* Tablet media Query*/
+@media only screen and (max-width: 76.8rem) {
+  .form-container {
+    height: 15rem;
+    transform: translate(-50%, -7.5rem);
+  }
+  .whitespace-form {
+    height: 11rem;
+  }
+  .form-control {
+    flex-wrap: wrap;
+  }
+  .form-control > input[type=url] {
+    flex-basis: 100%;
+    order: -1;
+  }
+  .form-control > input[type=text] {
+    flex-basis: 70%;
+  }
+  .form-control > input[type=submit] {
+    flex-basis: 25%;
+  }
+}
+/* Mobile media Query*/
+@media only screen and (max-width: 42rem) {
+  .form-container {
+    height: 18rem;
+    transform: translate(-50%, -9rem);
+    padding: 1rem;
+  }
+  .whitespace-form {
+    height: 11rem;
+  }
+  .form-control {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .form-control > input {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .form-control > input[type=url] {
+    flex-basis: 100%;
+  }
+  .form-control > input[type=text] {
+    flex-basis: 100%;
+  }
+  .form-control > input[type=submit] {
+    flex-basis: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

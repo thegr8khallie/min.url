@@ -9,7 +9,7 @@
   src: url("../../assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
 
-body {
+* {
   font-family: $poppinsMed;
   font-size: 1.6rem;
 }
@@ -17,4 +17,24 @@ h1,
 h2,
 h3 {
   font-family: $poppinsBold;
+}
+h1.hero-text-header {
+  font-size: 9rem;
+  line-height: 9rem;
+}
+p.hero-text-body {
+  color: #6a6666;
+}
+button,
+input[type="submit"] {
+  color: $mintCream;
+  &:hover {
+    color: darken($mintCream, 10%);
+  }
+}
+@media only screen and (max-width: $mobile) {
+  h1.hero-text-header {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
 }

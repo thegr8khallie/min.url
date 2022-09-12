@@ -26,10 +26,10 @@
 }
 .nav-user-signup {
   padding: 0.3rem;
-  background-color: $cyan;
   text-align: center;
   width: 10rem;
   border-radius: 5rem;
+  
 }
 
 .hamburger-wrapper {
@@ -43,7 +43,7 @@
     margin: 0.1rem 0;
   }
 }
-@media screen and (max-width: $tablet) {
+@media only screen and (max-width: $tablet) {
   .nav {
     width: 100vw;
     padding: 2rem 0;
@@ -60,6 +60,7 @@
     transform: translate(-0.5rem, -20rem);
     gap: 0.5rem;
     padding: 1rem;
+    transition: 1s;
   }
   .hamburger-wrapper {
     display: block;
@@ -68,15 +69,6 @@
     right: 0.2rem;
   }
 }
-@keyframes ham-menu {
-  from {
-    transform: translate(-0.5rem, -20rem);
-  }
-  to {
-    transform: translate(-0.5rem, 0.5rem);
-  }
-}
-.ham-menu {
-  animation: ham-menu 1s;
-  animation-fill-mode: forwards;
+.whitespace-nav {
+  height: 6vh;
 }

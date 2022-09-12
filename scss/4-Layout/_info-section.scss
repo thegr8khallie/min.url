@@ -1,0 +1,110 @@
+@use "../1-Helpers/helpers" as *;
+
+.info-section {
+  background-color: darken($mintCream, 10%);
+  position: relative;
+}
+.form-container {
+  width: calc(90vw - 12rem);
+  height: 10rem;
+  background-color: rebeccapurple;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -5rem);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.whitespace-form {
+  height: 10rem;
+}
+.form-control {
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  display: flex;
+  gap: 1rem;
+}
+.form-control > input {
+  border-radius: 1rem;
+  padding: 0 1.5rem;
+}
+.form-control > input:not([type="submit"]) {
+  border: 1px solid white;
+  &:focus {
+    outline: 0;
+  }
+}
+.form-control > input[type="url"] {
+  flex-basis: 55%;
+}
+.form-control > input[type="text"] {
+  flex-basis: 30%;
+}
+.form-control > input[type="submit"] {
+  flex-basis: 15%;
+}
+
+.info-section-intro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 40rem;
+  text-align: center;
+  background-color: maroon;
+}
+.info-section-bullets {
+}
+/* Tablet media Query*/
+@media only screen and (max-width: $tablet) {
+  .form-container {
+    height: 15rem;
+    transform: translate(-50%, -7.5rem);
+  }
+  .whitespace-form {
+    height: 11rem;
+  }
+  .form-control {
+    flex-wrap: wrap;
+  }
+  .form-control > input[type="url"] {
+    flex-basis: 100%;
+    order: -1;
+  }
+  .form-control > input[type="text"] {
+    flex-basis: 70%;
+  }
+  .form-control > input[type="submit"] {
+    flex-basis: 25%;
+  }
+}
+/* Mobile media Query*/
+@media only screen and (max-width: $mobile) {
+  .form-container {
+    height: 18rem;
+    transform: translate(-50%, -9rem);
+    padding: 1rem;
+  }
+  .whitespace-form {
+    height: 11rem;
+  }
+  .form-control {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .form-control > input {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .form-control > input[type="url"] {
+    flex-basis: 100%;
+  }
+  .form-control > input[type="text"] {
+    flex-basis: 100%;
+  }
+  .form-control > input[type="submit"] {
+    flex-basis: 100%;
+  }
+}

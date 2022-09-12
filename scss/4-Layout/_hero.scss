@@ -1,0 +1,41 @@
+@use "../1-Helpers/helpers" as *;
+
+.hero {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 10rem;
+}
+.hero-svg {
+  flex-basis: 50%;
+}
+.hero-text {
+  display: grid;
+  justify-content: left;
+  align-content: center;
+}
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 1.5rem;
+}
+.hero-btn {
+  width: 12rem;
+  padding: 0.5rem;
+  border-radius: 9rem;
+}
+@media only screen and (max-width: $tablet) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero-text {
+    align-self: center;
+    place-items: center;
+  }
+  .hero-text-wrapper {
+    text-align: center;
+  }
+  .hero-btn {
+    align-self: center;
+  }
+}

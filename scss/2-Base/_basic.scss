@@ -1,6 +1,19 @@
+@use "../1-Helpers/helpers" as *;
+
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+button,
+input[type="submit"] {
+  background-color: $cyan;
+  border: 0.1rem solid $cyan;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background-color: lighten($cyan, 10%);
+    border: 0.1rem solid lighten($cyan, 10%);
+  }
 }

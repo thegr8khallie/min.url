@@ -16,7 +16,7 @@
           <span class="nav-info-resources">Resources</span>
 
           <span class="nav-user-login">Login</span>
-          <span class="nav-user-signup">Sign Up</span>
+          <button class="nav-user-signup">Sign Up</button>
         </div>
       </div>
       <div class="hamburger-wrapper">
@@ -24,35 +24,51 @@
         <div class="hamburger"></div>
       </div>
     </nav>
-
+    <div class="whitespace-nav"></div>
     <header class="hero">
+      <div class="hero-text">
+        <div class="hero-text-wrapper">
+          <h1 class="hero-text-header">
+            Short Links <br />
+            Big Results
+          </h1>
+          <p class="hero-text-body">
+            Shorten, store and share links to your products and services with
+            our all-in-one solution!
+          </p>
+          <button class="hero-btn">Get Started</button>
+        </div>
+      </div>
       <div class="hero-svg">
         <img src="./assets/images/hero.svg" alt="Hero Image" />
       </div>
-      <div class="hero-text">
-        <h1 class="hero-text-header">
-          Short Links <br />
-          Big Results
-        </h1>
-        <p class="hero-text-body">
-          Shorten, store and share links to your products and services with our
-          all-in-one solution!
-        </p>
-        <button class="hero-btn">Get Started</button>
-      </div>
     </header>
-    <section class="form-container">
-      <form class="form-control">
-        <input type="url" name="form-link" id="form-link" />
-        <input type="submit" value="Shorten it!" />
-      </form>
-    </section>
     <section class="info-section">
-      <h2 class="info-section-header">Advanced Toolkit</h2>
-      <p class="info-section-text">
-        Manage all your operations with our advanced toolkit dashboard (Must be
-        Logged in).
-      </p>
+      <section class="form-container">
+        <form class="form-control">
+          <input
+            type="text"
+            name="form-name"
+            id="form-name"
+            placeholder="Link name"
+          />
+          <input
+            type="url"
+            name="form-link"
+            id="form-link"
+            placeholder="Paste link here"
+          />
+          <input type="submit" value="Shorten it!" />
+        </form>
+      </section>
+      <div class="whitespace-form"></div>
+      <div class="info-section-intro">
+        <h2 class="info-section-header">Advanced Toolkit</h2>
+        <p class="info-section-text">
+          Manage all your operations with our advanced toolkit dashboard (Must
+          be Logged in).
+        </p>
+      </div>
       <ul class="info-section-bullets">
         <li class="info-section-bullet">
           <article class="info-section-point">

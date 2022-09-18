@@ -1,0 +1,154 @@
+@use "../1-Helpers/helpers" as *;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  gap: 5rem;
+  background-color: #232027;
+  width: calc(100vw - 1.65rem);
+  position: relative;
+  right: 6rem;
+  p {
+    transition: 0.25s;
+  }
+}
+.footer h3:not(.socalhead) {
+  margin-bottom: 1rem;
+}
+.footer-logo {
+  flex-basis: 20%;
+}
+.footer-points {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-socials {
+  flex-basis: 20%;
+  text-align: center;
+}
+.social-apps {
+  display: grid;
+  grid-template: 3 1fr / 2 1fr;
+  place-items: center;
+  row-gap: 2rem;
+}
+.social-apps > a {
+}
+.social-apps > a:nth-child(1) {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+.social-apps > a:nth-child(2) {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+.social-apps > a:nth-child(3) {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+.social-apps > a:nth-child(4) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+.social-apps > a:nth-child(5) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+.social-apps > a:nth-child(6) {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+.social-app {
+  @include circleConstructor(5rem, transparent);
+  outline: 0.3rem solid $graniteGray;
+  transition: 0.25s;
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  path {
+    fill: $graniteGray;
+  }
+  &:hover {
+    outline-offset: 0.3rem;
+    > svg {
+      animation: shake 0.5s;
+    }
+    path {
+      fill: $mintCream;
+    }
+  }
+}
+.twitter:hover {
+  @include bgxoutline(#1d9bf1);
+}
+.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d75;
+}
+.reddit:hover {
+  background: linear-gradient(45deg, #fc0d0b, #f5ad00);
+  outline-color: #f96106;
+}
+.github:hover {
+  background: linear-gradient(to top, #080607, #1c1d21);
+  outline-color: #1c1d21;
+}
+.stackoverflow:hover {
+  background: linear-gradient(135deg, #f38023, #f8964d);
+  outline-color: #f38023;
+}
+.linkedin:hover {
+  @include bgxoutline(#0b65c3);
+}
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+@media only screen and (max-width: $tablet) {
+  .footer {
+    width: 100vw;
+    right: 0;
+    flex-wrap: wrap;
+  }
+  .footer-socials {
+    flex-basis: 30%;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .footer-logo,
+  .footer-points,
+  .footer-socials {
+    flex-basis: 100%;
+  }
+  .footer-points {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-logo,
+  .footer-points--features,
+  .footer-points--resources,
+  .footer-points--company {
+    display: grid;
+    place-items: center;
+  }
+}

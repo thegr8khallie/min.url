@@ -7,11 +7,15 @@
 }
 .hero-svg {
   flex-basis: 50%;
+  opacity: 0;
+  animation: hero-svg 0.5s ease forwards 0.5s;
 }
 .hero-text {
   display: grid;
   justify-content: left;
   align-content: center;
+  opacity: 0;
+  animation: hero-text 0.5s ease forwards 1s;
 }
 .hero-text-wrapper {
   display: flex;
@@ -37,5 +41,25 @@
   }
   .hero-btn {
     align-self: center;
+  }
+}
+@keyframes hero-svg {
+  from {
+    transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes hero-text {
+  from {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

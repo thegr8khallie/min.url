@@ -22,15 +22,37 @@ h1.hero-text-header {
   font-size: 9rem;
   line-height: 9rem;
 }
-p.hero-text-body {
-  color: #6a6666;
+p {
+  color: $graniteGray;
 }
+
 button,
 input[type="submit"] {
   color: $mintCream;
   &:hover {
     color: darken($mintCream, 10%);
   }
+}
+nav span:hover {
+  color: $cyan;
+}
+.point-text-header {
+  font-size: 2rem;
+}
+.boost h2,
+.footer h2,
+.footer h3 {
+  color: $mintCream;
+}
+h2.boost-header,
+.info-section-header {
+  font-size: 3rem;
+}
+.footer p:hover {
+  color: $cyan;
+}
+.footer h2 {
+  font-size: 5rem;
 }
 @media only screen and (max-width: $mobile) {
   h1.hero-text-header {

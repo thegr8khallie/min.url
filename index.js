@@ -100,7 +100,17 @@ function dataHandling(minUrlName, minUrlLink, minUrl) {
 
 const theUrlName =
   urlNameField.value === "" ? "Untitled Link" : urlNameField.value;
-
+// // Local Storage Scripts
+// let savedLinks = [];
+// let savedLinksLocal = localStorage.setItem("savedLinksArray", savedLinks);
+// class minUrlObject {
+//   constructor (urlName, minUrl, minUrlFull) {
+//     this.urlName = urlName;
+//     this.minUrl = minUrl;
+//     this.minUrlFull = minUrlFull;
+//     savedLinks.push(this);
+//   }
+// }
 //POST request to shrtco.de API
 async function getMinUrl(url) {
   let serverData = await axios.post(
